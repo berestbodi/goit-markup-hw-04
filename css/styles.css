@@ -167,13 +167,11 @@ button {
 /* MAIN */
 /* HERO*/
 .hero-section {
-  background: var(--navy-blue);
-
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/background.png);
+    url(../images/background.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -378,8 +376,6 @@ button {
 
 .portfolio-item {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  overflow: hidden;
 }
 
 .portfolio-item:hover {
@@ -389,6 +385,11 @@ button {
 }
 
 .portfolio-thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-text {
   position: absolute;
   left: 0;
   top: 0;
@@ -403,7 +404,7 @@ button {
   z-index: 1;
 }
 
-.portfolio-item:hover .portfolio-thumb {
+.portfolio-item:hover .portfolio-text {
   transform: translateY(0%);
 }
 /* /PORTFOLIO */
