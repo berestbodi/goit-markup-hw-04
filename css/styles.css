@@ -393,7 +393,6 @@ button {
   position: absolute;
   left: 0;
   top: 0;
-
   color: var(--cloud, #f4f4fd);
   padding: 40px 32px;
   background-color: var(--iris);
