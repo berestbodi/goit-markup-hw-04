@@ -320,6 +320,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-social-link:hover,
@@ -377,37 +378,31 @@ button {
 
 .portfolio-item {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
 }
 
 .portfolio-item:hover {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  transform: translateY(0%);
 }
 
 .portfolio-thumb {
-  position: relative;
-  overflow: hidden;
-}
-
-/* Overlay-текст */
-.portfolio-overlay {
   position: absolute;
   top: 0;
   left: 0;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
   color: var(--cloud, #f4f4fd);
   padding: 40px 32px;
-  background-color: #4d5ae5;
+  background-color: var(--iris);
   height: 100%;
   width: 100%;
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
 }
 
-/* Виїзд при hover */
-.portfolio-thumb:hover .portfolio-overlay {
+.portfolio-item:hover .portfolio-thumb {
   transform: translateY(0%);
 }
 /* /PORTFOLIO */
@@ -439,9 +434,8 @@ button {
 }
 
 .footer-social-list {
-  margin-top: 16px;
   display: flex;
-  gap: 24px;
+  gap: 16px;
 }
 
 .footer-social-item {
@@ -463,11 +457,12 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-social-link:hover,
 .footer-social-link:focus {
-  background-color: var(--ocean);
+  background-color: var(--green);
 }
 
 .footer-list-icon {
@@ -476,9 +471,15 @@ button {
 
 .footer-main-container {
   display: flex;
+  align-items: baseline;
+}
+
+.footer-container {
+  margin-right: 120px;
 }
 
 .footer-title {
   font-weight: 500;
   color: var(--white);
+  margin-bottom: 16px;
 }
